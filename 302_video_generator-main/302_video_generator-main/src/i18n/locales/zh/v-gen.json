@@ -1,0 +1,818 @@
+{
+  "action": {
+    "create_video": "生成视频",
+    "delete_task": "删除任务",
+    "delete_video": "删除视频",
+    "download_video": "下载视频",
+    "edit_video": "重新编辑",
+    "extend_video": "拓展视频",
+    "extend_video_audio": "添加配音",
+    "extend_video_ratio": "调整比例",
+    "extend_video_style": "调整风格",
+    "extend_video_time": "拓展时长",
+    "extend_video_upscale": "提升分辨率",
+    "recreate_video": "重新生成"
+  },
+  "desc": "使用AI快速生成各种定制视频",
+  "dialog": {
+    "audio_content": "配音内容",
+    "audio_content_placeholder": "请输入配音要求",
+    "cancel": "取消",
+    "duration": "视频时长",
+    "extend_audio": {
+      "description": "通过AI技术为视频添加配音",
+      "title": "添加视频配音"
+    },
+    "extend_ratio": {
+      "description": "通过AI技术调整视频比例",
+      "horizontal_screen": "横屏",
+      "title": "调整视频比例",
+      "vertical_screen": "竖屏"
+    },
+    "extend_style": {
+      "description": "通过AI技术调整视频风格",
+      "title": "调整视频风格"
+    },
+    "extend_upscale": {
+      "description": "通过AI技术提升视频分辨率和质量",
+      "title": "提升视频分辨率"
+    },
+    "seconds": "秒",
+    "select_duration": "选择时长",
+    "select_resolution": "选择分辨率",
+    "submit": "确认",
+    "video_content": "视频内容",
+    "video_content_placeholder": "请输入视频内容",
+    "video_content_style": "视频风格",
+    "video_content_style_placeholder": "请输入视频风格",
+    "video_duration": "视频时长",
+    "video_ratio": "视频比例",
+    "video_resolution": "视频分辨率"
+  },
+  "example": {
+    "prompt": "在清晨的薄雾中，阳光透过树梢，洒下斑驳的光影，给大地披上了一层金色的薄纱。远处，青山如黛，层层叠叠地延伸至天际，与蔚蓝的天空融为一体。近处，小溪潺潺流水，清澈见底，溪畔野花竞相开放，红的、黄的、紫的，仿佛大地的调色盘。微风拂过，花香与泥土的芬芳交织在一起，清新怡人。此刻，天地如此静谧，仿佛时光在这一刻凝滞，令人心旷神怡",
+    "try": "试一试"
+  },
+  "form": {
+    "audio": {
+      "desc": "选择是否开启视频音效",
+      "option": {
+        "close": "关闭音效",
+        "open": "开启音效"
+      },
+      "title": "音效设置"
+    },
+    "camera": {
+      "desc": "选择视频镜头方向",
+      "option": {
+        "grane_down": "下降",
+        "grane_up": "上升",
+        "move_down": "下移",
+        "move_left": "左移",
+        "move_right": "右移",
+        "move_up": "上移",
+        "none": "无",
+        "orbit_left": "左环绕",
+        "orbit_right": "右环绕",
+        "pan_left": "左摇",
+        "pan_right": "右摇",
+        "push_in": "推进",
+        "push_out": "推出"
+      },
+      "title": "镜头控制"
+    },
+    "first_frame": {
+      "desc": "拖入或点击上传图片",
+      "title": "视频首帧"
+    },
+    "higgsfield_end_frame": {
+      "desc": "上传视频尾帧",
+      "title": "视频尾帧（可选）"
+    },
+    "higgsfield_mix": {
+      "title": "开启混合动作模板"
+    },
+    "higgsfield_model": {
+      "desc": "选择 Higgsfield 模型",
+      "option": {
+        "lite": "Lite",
+        "standard": "Standard",
+        "turbo": "Turbo"
+      },
+      "title": "Higgsfield 模型"
+    },
+    "higgsfield_motion": {
+      "desc": "选择动作模板",
+      "option": {
+        "action_run_fire": "动作奔跑 + 着火",
+        "agent_reveal1": "特工现身 1",
+        "agent_reveal2": "特工现身 2",
+        "building_explosion1": "建筑爆炸 1",
+        "building_explosion2": "建筑爆炸 2",
+        "building_explosion_disintegration": "建筑爆炸分解",
+        "car_chasing_building_explosion": "汽车追逐 + 建筑爆炸",
+        "car_crash": "汽车碰撞",
+        "car_explosion1": "汽车爆炸 1",
+        "car_explosion2": "汽车爆炸 2",
+        "crash_zoom_in_face_punch": "冲击放大 + 面部冲击",
+        "crash_zoom_in_tentacles1": "冲击放大 + 触手 1",
+        "crash_zoom_in_tentacles2": "冲击放大 + 触手 2",
+        "dirty_lens1": "脏镜头 1",
+        "dirty_lens2": "脏镜头 2",
+        "disintegration1": "分解效果 1",
+        "disintegration2": "分解效果 2",
+        "eyes_in1": "眼睛放大 1",
+        "eyes_in2": "眼睛放大 2",
+        "face_punch1": "面部冲击 1",
+        "face_punch2": "面部冲击 2",
+        "flying1": "飞行 1",
+        "flying2": "飞行 2",
+        "flying_set_on_fire": "飞行 + 着火",
+        "glam1": "魅力 1",
+        "glam2": "魅力 2",
+        "invisible1": "隐形 1",
+        "invisible2": "隐形 2",
+        "kiss1": "亲吻 1",
+        "kiss2": "亲吻 2",
+        "lens_crack": "镜头破裂",
+        "lens_flare1": "镜头光晕 1",
+        "lens_flare2": "镜头光晕 2",
+        "levitation1": "悬浮 1",
+        "levitation2": "悬浮 2",
+        "levitation_invisible": "悬浮 + 隐形",
+        "melting1": "熔化 1",
+        "melting2": "熔化 2",
+        "mouth_in1": "嘴部放大 1",
+        "mouth_in2": "嘴部放大 2",
+        "push_to_glass1": "玻璃压迫 1",
+        "push_to_glass2": "玻璃压迫 2",
+        "set_on_fire1": "着火 1",
+        "set_on_fire2": "着火 2",
+        "soul_jump1": "灵魂跳跃 1",
+        "soul_jump2": "灵魂跳跃 2",
+        "tentacles1": "触手 1",
+        "tentacles2": "触手 2",
+        "thunder_god1": "雷神 1",
+        "thunder_god2": "雷神 2",
+        "thunder_god_levitation": "雷神 + 悬浮",
+        "thunder_god_turning_metal": "雷神 + 金属化",
+        "thunder_god_wind_to_face": "雷神 + 面部风效",
+        "turning_metal1": "金属化 1",
+        "turning_metal2": "金属化 2",
+        "turning_metal_melting": "金属化 + 熔化",
+        "wind_to_face1": "面部风效 1",
+        "wind_to_face2": "面部风效 2"
+      },
+      "title": "动作模板",
+      "title1": "动作模板",
+      "title2": "动作模板 2"
+    },
+    "higgsfield_motion_strength": {
+      "title": "参考强度"
+    },
+    "higgsfield_prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "higgsfield_start_frame": {
+      "desc": "上传视频首帧",
+      "title": "视频首帧"
+    },
+    "higgsfield_time": {
+      "option": {
+        "long": "5秒",
+        "short": "3秒"
+      }
+    },
+    "kling_v21_aspect_ratio": {
+      "desc": "请选择视频比例",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "视频比例"
+    },
+    "kling_v21_cfg": {
+      "desc": "请选择视频创意程度",
+      "title": "视频创意程度"
+    },
+    "kling_v21_duration": {
+      "desc": "请选择视频时长",
+      "option": {
+        "10": "10秒",
+        "5": "5秒"
+      },
+      "title": "视频时长"
+    },
+    "kling_v21_image": {
+      "desc": "请上传首帧图片（仅支持jpg/png）",
+      "title": "首帧图片"
+    },
+    "kling_v21_negative_prompt": {
+      "desc": "请输入负面提示词",
+      "title": "负面提示词"
+    },
+    "kling_v21_prompt": {
+      "desc": "请输入视频内容",
+      "title": "视频内容"
+    },
+    "kling_v21_type": {
+      "desc": "请选择生成模式",
+      "option": {
+        "image_to_video": "图片生成视频",
+        "text_to_video": "文本生成视频"
+      },
+      "title": "生成模式"
+    },
+    "kling_v21_version": {
+      "desc": "请选择模型版本",
+      "option": {
+        "common": "普通版",
+        "hq": "高清版",
+        "master": "大师版"
+      },
+      "title": "模型版本"
+    },
+    "kling_v2_aspect_ratio": {
+      "desc": "选择视频比例",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "视频比例"
+    },
+    "kling_v2_cfg": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频创意程度"
+    },
+    "kling_v2_duration": {
+      "desc": "选择视频时长",
+      "option": {
+        "10": "10s",
+        "5": "5s"
+      },
+      "title": "视频时长"
+    },
+    "kling_v2_image": {
+      "desc": "上传图片",
+      "title": "图片"
+    },
+    "kling_v2_negative_prompt": {
+      "desc": "请输入您不想要生成的视频内容",
+      "title": "负面内容"
+    },
+    "kling_v2_prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "kling_v2_type": {
+      "desc": "选择生成模式",
+      "option": {
+        "image_to_video": "图片生成视频",
+        "text_to_video": "文本生成视频"
+      },
+      "title": "生成模式"
+    },
+    "last_frame": {
+      "desc": "拖入或点击上传图片",
+      "title": "视频尾帧"
+    },
+    "loop": {
+      "desc": "选择是否开启视频循环",
+      "option": {
+        "close": "关闭循环",
+        "open": "开启循环"
+      },
+      "title": "视频循环"
+    },
+    "main_image": {
+      "desc": "请上传主体参考图片",
+      "title": "主体图片"
+    },
+    "main_image1": {
+      "desc": "请上传主体图片1",
+      "title": "主体图片1"
+    },
+    "main_image2": {
+      "desc": "请上传主体图片2",
+      "title": "主体图片2"
+    },
+    "main_image3": {
+      "desc": "请上传主体图片3",
+      "title": "主体图片3"
+    },
+    "minimaxi_duration": {
+      "desc": "选择视频时长",
+      "option": {
+        "six": "6s",
+        "ten": "10s"
+      },
+      "title": "视频时长"
+    },
+    "minimaxi_first_frame_image": {
+      "desc": "上传视频首帧",
+      "title": "视频首帧"
+    },
+    "minimaxi_hailuo_prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "minimaxi_prompt_optimizer": {
+      "desc": "启用增强提示词",
+      "title": "增强提示词"
+    },
+    "minimaxi_resolution": {
+      "desc": "选择视频分辨率",
+      "option": {
+        "1080p": "1080p",
+        "768p": "768p"
+      },
+      "title": "视频分辨率"
+    },
+    "mj_video_image": {
+      "desc": "请上传首帧图片",
+      "title": "首帧图片"
+    },
+    "mj_video_motion": {
+      "desc": "请选择视频运动幅度",
+      "high": "高",
+      "low": "低",
+      "title": "运动幅度"
+    },
+    "mj_video_prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "model": {
+      "desc": "选择模型",
+      "option": {
+        "cog": "智谱",
+        "genmo": "Mochi-V1",
+        "haiper": "Haiper",
+        "higgsfield": "HiggsField",
+        "hunyuan": "Hunyuan",
+        "kling": "Kling",
+        "kling_15": "Kling-V1.5",
+        "kling_16": "Kling-V1.6",
+        "kling_2": "Kling-V2.0",
+        "kling_21": "Kling-V2.1",
+        "lightricks": "Lightricks",
+        "luma": "Luma",
+        "minimax": "Minimax-Video-01",
+        "minimax_live2d": "Minimax-Live2D",
+        "minimax_s2v01": "Minimax-S2V-01",
+        "minimaxi_hailuo_02": "Minimax-Hailuo-02",
+        "mj_video": "MJ-Video",
+        "pika": "Pika",
+        "pixverse": "PixVerse",
+        "runway": "Runway",
+        "seaweed": "即梦-Seaweed",
+        "seedance": "即梦-Seedance",
+        "veo3": "Veo3",
+        "veo3_fast": "Veo3-Fast",
+        "veo3_pro": "Veo3-Pro",
+        "veo3_pro_frames": "Veo3-Pro-Frames",
+        "vidu": "Vidu",
+        "vidu_2": "Vidu-V2",
+        "wanx_plus": "通义万相-Plus",
+        "wanx_turbo": "通义万相-Turbo"
+      },
+      "title": "视频模型"
+    },
+    "pika_affects": {
+      "cake-ify": "蛋糕粉化",
+      "crumble": "粉碎",
+      "crush": "压碎",
+      "decapitate": "斩首",
+      "deflate": "放气",
+      "desc": "请选择视频特效",
+      "dissolve": "溶解",
+      "explode": "爆炸",
+      "eye-pop": "爆眼",
+      "inflate": "充气",
+      "levitate": "悬浮",
+      "melt": "融化",
+      "peel": "剥离",
+      "poke": "戳",
+      "squish": "压扁",
+      "ta-da": "嗒嗒",
+      "tear": "撕裂",
+      "title": "特效"
+    },
+    "pika_image": {
+      "desc": "请上传参考图片",
+      "title": "图片"
+    },
+    "pika_negative_prompt": {
+      "desc": "请输入负面提示词",
+      "title": "负面提示词"
+    },
+    "pika_prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "ratio": {
+      "desc": "选择视频生成比例",
+      "option": {
+        "16:9": "16:9 (1280x720)",
+        "1:1": "1:1 (960x960)",
+        "3:4": "3:4 (832x1088)",
+        "4:3": "4:3 (1088x832)",
+        "9:16": "9:16 (720x1280)",
+        "custom": "自定义"
+      },
+      "title": "视频比例"
+    },
+    "reference_image": {
+      "desc": "请上传参考图",
+      "title": "参考图"
+    },
+    "reference_image1": {
+      "desc": "请上传参考图1",
+      "title": "参考图1"
+    },
+    "reference_image2": {
+      "desc": "请上传参考图2",
+      "title": "参考图2"
+    },
+    "reference_image3": {
+      "desc": "请上传参考图3",
+      "title": "参考图3"
+    },
+    "reference_image4": {
+      "desc": "请上传参考图4",
+      "title": "参考图4"
+    },
+    "seedance_cf": {
+      "desc": "选择镜头固定",
+      "option": {
+        "false": "关闭",
+        "true": "开启"
+      },
+      "title": "镜头固定"
+    },
+    "seedance_duration": {
+      "desc": "选择视频时长",
+      "option": {
+        "10": "10s",
+        "5": "5s"
+      },
+      "title": "视频时长"
+    },
+    "seedance_image": {
+      "desc": "上传图片",
+      "title": "图片"
+    },
+    "seedance_model": {
+      "desc": "选择 Seedance 模型",
+      "option": {
+        "lite": "Lite",
+        "pro": "Pro"
+      },
+      "title": "Seedance 模型"
+    },
+    "seedance_ratio": {
+      "desc": "选择视频比例",
+      "option": {
+        "1_1": "1:1",
+        "21_9": "21:9",
+        "3_4": "3:4",
+        "9_16": "9:16",
+        "9_21": "9:21"
+      },
+      "title": "视频比例"
+    },
+    "seedance_resolution": {
+      "desc": "选择视频分辨率",
+      "option": {
+        "1080p": "1080p",
+        "480p": "480p",
+        "720p": "720p"
+      },
+      "title": "视频分辨率"
+    },
+    "seedance_text": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "seedance_type": {
+      "desc": "选择生成模式",
+      "option": {
+        "image_to_video": "图片生成视频",
+        "text_to_video": "文本生成视频"
+      },
+      "title": "生成模式"
+    },
+    "seedance_wm": {
+      "desc": "选择视频水印",
+      "option": {
+        "false": "关闭",
+        "true": "开启"
+      },
+      "title": "视频水印"
+    },
+    "style": {
+      "desc": "选择视频特效",
+      "option": {
+        "cake_ify": "切开",
+        "crumble": "碎裂",
+        "crush": "压扁",
+        "deflate": "泄气",
+        "dissolve": "分解",
+        "explode": "爆炸",
+        "inflate": "膨胀",
+        "melt": "融化",
+        "none": "无",
+        "squish": "挤扁",
+        "ta_da": "隐藏"
+      },
+      "title": "视频特效"
+    },
+    "template": {
+      "desc": "选择视频特效",
+      "option": {
+        "aliveArt": "活灵活现",
+        "babyFace": "娃娃脸",
+        "batmanReturns": "变身成蝙蝠侠",
+        "blackGokuEngine": "黑悟空引擎",
+        "catwomanTransformation": "疯狂猫女变身",
+        "christmasGiftBox": "圣诞礼物盲盒",
+        "christmasOutfit": "圣诞战袍",
+        "cigarBoss": "雪茄大佬",
+        "fightAndMeet": "不打不相识",
+        "hairCurl": "万物皆可羊毛卷",
+        "hairKing": "发量王者",
+        "harleyQuinnTransformation": "小丑女哈莉·奎茵变身",
+        "hugYourLove": "爱的抱抱",
+        "ingiGaze": "英姬的凝视",
+        "ironmanTransformation": "变身成钢铁侠",
+        "jokerRebirth": "变身成小丑",
+        "kissOfLove": "爱的亲亲",
+        "leggyRun": "腿长跑酷",
+        "legoBlast": "乐高爆炸",
+        "monsterInvades": "怪物入侵",
+        "muscleMan": "成为肌肉猛男",
+        "sailorMoonTransformation": "美少女战士变身",
+        "santaHideAndSeek": "圣诞老人藏哪",
+        "squidGame": "鱿鱼游戏",
+        "squishIt": "压扁它",
+        "summonHulk": "变身成绿巨人",
+        "venomBrother": "召唤毒液兄弟",
+        "venomColorBox": "变身成毒液(彩色盲盒版)",
+        "venomReveal": "谁是毒液",
+        "venomTransformation": "变身成毒液",
+        "wickedShots": "恶作剧射击",
+        "wizardHat": "巫师帽",
+        "wonderWomanTransformation": "神奇女侠变身",
+        "zombieHand": "僵尸之手",
+        "zombieMode": "僵尸模式"
+      },
+      "title": "视频特效"
+    },
+    "third_frame": {
+      "desc": "拖入或点击上传图片",
+      "title": "视频第三帧"
+    },
+    "time": {
+      "desc": "选择视频时长",
+      "option": {
+        "long": "10秒",
+        "short": "5秒"
+      },
+      "title": "视频时长"
+    },
+    "type": {
+      "desc": "选择视频生成模式",
+      "option": {
+        "fast": "快速",
+        "hq": "高清"
+      },
+      "title": "生成模式"
+    },
+    "veo3_aspect_ratio": {
+      "desc": "选择视频比例",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "视频比例"
+    },
+    "veo3_enhance_prompt": {
+      "desc": "启用增强提示词",
+      "title": "增强提示词"
+    },
+    "veo3_fast_prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "veo3_generate_audio": {
+      "desc": "启用生成音频",
+      "title": "生成音频"
+    },
+    "veo3_pro_frames_image": {
+      "desc": "上传图片",
+      "title": "图片"
+    },
+    "veo3_pro_frames_prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "veo3_pro_prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "veo3_prompt": {
+      "desc": "请输入您想要生成的视频内容",
+      "title": "视频内容"
+    },
+    "vidu_resolution": {
+      "desc": "选择视频分辨率",
+      "option": {
+        "fhd": "超清",
+        "hd": "高清",
+        "sd": "标清"
+      },
+      "title": "视频分辨率"
+    },
+    "vidu_scene": {
+      "desc": "选择场景效果",
+      "option": {
+        "christmas_effect": "变身圣诞老人",
+        "couple_arrival@flower": "情侣送花",
+        "couple_arrival@hug": "情侣拥抱",
+        "couple_arrival@kiss": "情侣亲吻",
+        "couple_arrival@wave": "情侣挥手",
+        "cupid_arrow": "丘比特之箭",
+        "dreamy_wedding": "梦幻婚礼",
+        "dynasty_dress@dress": "古风换装",
+        "emotionlab@laugh": "狂笑",
+        "emotionlab@smile": "微笑",
+        "emotionlab@surprised": "惊讶",
+        "emotionlab@terrible": "恐惧",
+        "explode": "爆炸",
+        "hair_swap@curl": "羊毛卷",
+        "hair_swap@double": "双马尾",
+        "hair_swap@long": "长发",
+        "hug": "拥抱",
+        "inflate": "膨胀",
+        "interaction@love": "爱的互动",
+        "interaction@rose": "送玫瑰花",
+        "kiss": "亲吻",
+        "live_memory@old_photo": "老照片动起来",
+        "live_photo@camera": "镜头动",
+        "live_photo@smile": "微笑",
+        "live_photo@walk": "走路",
+        "live_photo@wind": "风动",
+        "lover_pose@pose": "全国福比心",
+        "lunar_newyear@cheers": "新年举杯",
+        "lunar_newyear@fireworks": "新年烟花",
+        "lunar_newyear@gift": "新年红包",
+        "melt": "融化",
+        "merry_christmas": "圣诞老人举杯祝贺",
+        "pet_lovers": "萌宠恋人",
+        "romantic_lift": "浪漫公主抱",
+        "santa_gifts": "圣诞老人送礼",
+        "santa_hug": "圣诞老人拥抱",
+        "sweet_proposal": "甜蜜求婚",
+        "twist": "捏捏",
+        "wish_sender@coins": "财神发金币",
+        "wish_sender@love": "和财神比心",
+        "youth_rewind@rewind": "童年回忆"
+      },
+      "title": "场景效果"
+    },
+    "vidu_style": {
+      "desc": "选择视频风格",
+      "option": {
+        "anime": "动漫",
+        "general": "通用"
+      },
+      "title": "视频风格"
+    },
+    "vidu_time": {
+      "desc": "选择视频时长",
+      "option": {
+        "long": "8秒",
+        "short": "4秒"
+      },
+      "title": "视频时长"
+    },
+    "vidu_type": {
+      "desc": "选择视频生成类型",
+      "option": {
+        "character": "参考主体生成视频",
+        "general": "通用",
+        "scene": "生成场景特效视频"
+      },
+      "title": "视频类型"
+    },
+    "vidu_v2_aspect_ratio": {
+      "desc": "选择视频比例",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "视频比例"
+    },
+    "vidu_v2_end_frame": {
+      "desc": "上传视频尾帧",
+      "title": "视频尾帧"
+    },
+    "vidu_v2_image": {
+      "desc": "上传图片",
+      "title": "图片"
+    },
+    "vidu_v2_model": {
+      "desc": "选择 Vidu 模型",
+      "option": {
+        "vidu1_5": "vidu1.5",
+        "vidu2": "vidu2.0",
+        "viduq1": "viduq1"
+      },
+      "title": "Vidu 模型"
+    },
+    "vidu_v2_movement_amplitude": {
+      "desc": "选择运动幅度",
+      "option": {
+        "auto": "自动",
+        "large": "大",
+        "low": "小",
+        "medium": "中"
+      },
+      "title": "运动幅度"
+    },
+    "vidu_v2_reference_image1": {
+      "desc": "上传参考图1",
+      "title": "参考图1"
+    },
+    "vidu_v2_reference_image2": {
+      "desc": "上传参考图2",
+      "title": "参考图2"
+    },
+    "vidu_v2_reference_image3": {
+      "desc": "上传参考图3",
+      "title": "参考图3"
+    },
+    "vidu_v2_resolution": {
+      "desc": "选择视频分辨率",
+      "option": {
+        "1080p": "1080p",
+        "360p": "360p",
+        "720p": "720p"
+      },
+      "title": "视频分辨率"
+    },
+    "vidu_v2_start_frame": {
+      "desc": "上传视频首帧",
+      "title": "视频首帧"
+    },
+    "vidu_v2_time": {
+      "desc": "选择视频时长",
+      "option": {
+        "4": "4s",
+        "5": "5s",
+        "8": "8s"
+      },
+      "title": "视频时长"
+    },
+    "vidu_v2_type": {
+      "desc": "选择视频生成模式",
+      "option": {
+        "character_to_video": "参考主体生成视频",
+        "head_tail_to_video": "首尾帧生成视频",
+        "image_to_video": "图片生成视频",
+        "scene_to_video": "生成场景特效视频",
+        "text_to_video": "文本生成视频"
+      },
+      "title": "生成模式"
+    }
+  },
+  "global": {
+    "status": {
+      "file_type_not_accepted": "不支持当前格式的图片，请重新上传！"
+    }
+  },
+  "info": {
+    "video_on_audio": "视频配音中",
+    "video_on_create": "视频生成中",
+    "video_on_extend": "视频拓展中"
+  },
+  "task": {
+    "clear": "清空任务",
+    "empty": "暂无视频生成任务",
+    "title": "创建视频",
+    "total": "共 {{count}} 条视频生成中"
+  },
+  "title": "AI视频生成器",
+  "veo3-fast": {
+    "prompt": "视频内容"
+  }
+}

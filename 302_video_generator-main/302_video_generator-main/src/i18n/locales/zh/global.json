@@ -1,0 +1,47 @@
+{
+  "about": {
+    "desc": "AI工具详情预览",
+    "title": "说明"
+  },
+  "desc": "创建属于你自己的AI工具",
+  "error": {
+    "code_invalid": "分享码错误, 更多请访问 302.AI",
+    "network_error": "网络服务错误, 请查看网络状态或稍后再试!",
+    "not_found": "页面不存在",
+    "tool_deleted": "该工具已删除, 更多请访问 302.AI",
+    "tool_disabled": "该工具已禁用, 更多请访问 302.AI",
+    "unknown_error": "发生未知错误, 请联系客服"
+  },
+  "footer": {
+    "desc": "内容由AI生成, 仅供参考",
+    "title": "Powered By"
+  },
+  "history": {
+    "clear": "清空",
+    "delete": "删除",
+    "desc": "所有历史记录均保存在本地，不会会上传",
+    "empty": "暂无记录",
+    "title": "历史记录",
+    "total": "共 {{count}} 条历史记录"
+  },
+  "lang": "中文",
+  "status": {
+    "file_type_not_accepted": "不支持当前格式的图片，请重新上传",
+    "uploading": "上传中..."
+  },
+  "symbol": "zh",
+  "system": {
+    "cancel": "取消",
+    "confirm": "确认",
+    "error": "系统错误",
+    "login": "<login>登录</login>",
+    "logout": "退出登录",
+    "notifi": "系统通知"
+  },
+  "theme": {
+    "dark": "夜间",
+    "light": "日间",
+    "system": "系统"
+  },
+  "title": "302.AI"
+}

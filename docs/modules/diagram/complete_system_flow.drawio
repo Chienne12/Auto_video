@@ -1,0 +1,436 @@
+<mxfile host="65bd71144e">
+    <diagram name="0. Tổng Quan Hệ Thống" id="overview">
+        <mxGraphModel dx="800" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="HỆ THỐNG TỰ ĐỘNG HÓA VIDEO TIKTOK - LUỒNG HOÀN CHỈNH" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="200" y="40" width="1200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="ĐẦU VÀO&lt;br&gt;Ảnh Sản Phẩm + Tên + Yêu Cầu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="650" y="140" width="300" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="PHẦN 1&lt;br&gt;XỬ LÝ HÌNH ẢNH" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;verticalAlign=top" parent="1" vertex="1">
+                    <mxGeometry x="200" y="280" width="280" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="• ImageProcessor&lt;br&gt;  - Xóa nền&lt;br&gt;  - Tăng cường (CLAHE)&lt;br&gt;  - Resize 9:16&lt;br&gt;&lt;br&gt;• ProductBible&lt;br&gt;  - Trích xuất đặc điểm&lt;br&gt;  - Phân tích màu sắc&lt;br&gt;  - Tạo prompts" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="210" y="320" width="260" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="PHẦN 2&lt;br&gt;TẠO KỊCH BẢN" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1;verticalAlign=top" parent="1" vertex="1">
+                    <mxGeometry x="540" y="280" width="280" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="• IntentRouter&lt;br&gt;  - Phân loại ý định&lt;br&gt;  - Chọn mẫu&lt;br&gt;&lt;br&gt;• Screenwriter&lt;br&gt;  - Tạo kịch bản&lt;br&gt;  - Chia cảnh&lt;br&gt;  - Tạo prompts hình ảnh" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="550" y="320" width="260" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="PHẦN 3&lt;br&gt;TẠO VIDEO" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;verticalAlign=top" parent="1" vertex="1">
+                    <mxGeometry x="880" y="280" width="280" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="• TTSGenerator (MIỄN PHÍ)&lt;br&gt;  - Giọng nói tiếng Việt&lt;br&gt;&lt;br&gt;• Veo3Client&lt;br&gt;  - Tạo video clips&lt;br&gt;&lt;br&gt;• VideoAssembler&lt;br&gt;  - Đồng bộ audio/video&lt;br&gt;  - Ghép các clips" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="890" y="320" width="260" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="PHẦN 4&lt;br&gt;TÍCH HỢP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1;verticalAlign=top" parent="1" vertex="1">
+                    <mxGeometry x="1220" y="280" width="280" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="• Orchestrator&lt;br&gt;  - Điều phối tất cả phần&lt;br&gt;  - Xử lý lỗi&lt;br&gt;  - Theo dõi chi phí&lt;br&gt;  - Ghi log&lt;br&gt;  - Dọn dẹp" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="1230" y="320" width="260" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="ĐẦU RA&lt;br&gt;Video TikTok (1080x1920, MP4)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="650" y="520" width="300" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="⏱️ Tổng thời gian: 45-90 giây/video&lt;br&gt;💰 Tổng chi phí: ~$0.31/video&lt;br&gt;📊 Tỷ lệ thành công: ~90%&lt;br&gt;🎬 Đầu ra: Video TikTok 21 giây" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;align=left;verticalAlign=top;strokeWidth=2" parent="1" vertex="1">
+                    <mxGeometry x="200" y="660" width="1300" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="📌 Click các tab bên dưới để xem luồng chi tiết từng phần ↓" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="550" y="800" width="500" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Product Bible" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=12" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="VideoScript" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=12" parent="1" source="6" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Video Cuối" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fontSize=12" parent="1" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="10" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1360" y="500"/>
+                            <mxPoint x="800" y="500"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="1. Phần 1 - Xử Lý Hình Ảnh" id="part1">
+        <mxGraphModel dx="800" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="p1_2" value="PHẦN 1: LUỒNG XỬ LÝ HÌNH ẢNH" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="300" y="40" width="600" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_3" value="BẮT ĐẦU&lt;br&gt;Ảnh Sản Phẩm Gốc" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="500" y="120" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_4" value="MODULE 1.1: ImageProcessor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="400" y="220" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_5" value="Tải &amp; Kiểm Tra Ảnh" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="500" y="300" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_6" value="Tăng Cường (CLAHE)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="500" y="380" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_7" value="Xóa Nền (rembg)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="500" y="460" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_8" value="Resize 9:16 (1080x1920)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="500" y="540" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_9" value="MODULE 1.2: ProductBible" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="400" y="640" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_10" value="Trích Xuất Màu (K-means)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="340" y="720" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_11" value="Trích Xuất Đặc Điểm&lt;br&gt;(Thương Hiệu, Danh Mục)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="710" y="730" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_12" value="Tạo Prompts Nhất Quán" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="500" y="820" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_13" value="ĐẦU RA&lt;br&gt;Product Bible JSON" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="500" y="920" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_14" value="⏱️ Thời gian: 3-8 giây/ảnh&lt;br&gt;💰 Chi phí: $0.0025 (Gemini tùy chọn)&lt;br&gt;✅ Thành công: ~98%" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=left" parent="1" vertex="1">
+                    <mxGeometry x="850" y="300" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p1_3" target="p1_4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p1_4" target="p1_5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p1_5" target="p1_6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p1_6" target="p1_7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p1_7" target="p1_8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p1_8" target="p1_9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p1_9" target="p1_10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p1_9" target="p1_11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p1_23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="p1_10" target="p1_12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="420" y="800"/>
+                            <mxPoint x="500" y="800"/>
+                            <mxPoint x="500" y="845"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p1_24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="p1_11" target="p1_12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="790" y="800"/>
+                            <mxPoint x="700" y="800"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p1_25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="1" source="p1_12" target="p1_13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="2. Phần 2 - Tạo Kịch Bản" id="part2">
+        <mxGraphModel dx="948" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1400" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="p2_2" value="PHẦN 2: LUỒNG TẠO KỊCH BẢN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="300" y="40" width="600" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_3" value="BẮT ĐẦU&lt;br&gt;Product Bible + Yêu Cầu Người Dùng" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="480" y="120" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_4" value="MODULE 2.2: IntentRouter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="400" y="220" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_5" value="Phân Loại Ý Định (Gemini)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="500" y="300" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_6" value="Ý Định?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="540" y="390" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_7" value="MẪU&lt;br&gt;KỂ CHUYỆN" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="280" y="520" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_8" value="MẪU&lt;br&gt;CHUYỂN ĐỘNG" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="540" y="520" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_9" value="MẪU&lt;br&gt;MONTAGE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11" parent="1" vertex="1">
+                    <mxGeometry x="800" y="520" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_10" value="MODULE 2.3: Screenwriter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="400" y="640" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_11" value="Tạo Kịch Bản (Gemini)&lt;br&gt;với ngữ cảnh Product Bible" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="480" y="720" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_12" value="Chia Cảnh&lt;br&gt;(3-5 cảnh, tối đa 8 giây/cảnh)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="480" y="820" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_13" value="ĐẦU RA&lt;br&gt;VideoScript&lt;br&gt;{hook, body, cta, scenes[]}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="480" y="940" width="240" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_14" value="⏱️ Thời gian: 3-10 giây&lt;br&gt;💰 Chi phí: $0.003/kịch bản&lt;br&gt;🎯 Độ chính xác: 85-90%&lt;br&gt;✅ Thành công: ~95%" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=left" parent="1" vertex="1">
+                    <mxGeometry x="850" y="720" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p2_3" target="p2_4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p2_4" target="p2_5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p2_5" target="p2_6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_18" value="kể chuyện" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10" parent="1" source="p2_6" target="p2_7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_19" value="chuyển động" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10" parent="1" source="p2_6" target="p2_8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_20" value="montage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10" parent="1" source="p2_6" target="p2_9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="p2_7" target="p2_10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="340" y="600"/>
+                            <mxPoint x="400" y="600"/>
+                            <mxPoint x="400" y="660"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2_22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="p2_8" target="p2_10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="p2_9" target="p2_10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="860" y="600"/>
+                            <mxPoint x="800" y="600"/>
+                            <mxPoint x="800" y="660"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2_24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p2_10" target="p2_11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p2_11" target="p2_12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2_26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="1" source="p2_12" target="p2_13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="3. Phần 3 - Tạo Video" id="part3">
+        <mxGraphModel dx="948" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1600" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="p3_2" value="PHẦN 3: LUỒNG TẠO VIDEO &amp; GHÉP PHIM" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="300" y="40" width="800" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_3" value="BẮT ĐẦU&lt;br&gt;VideoScript có Các Cảnh" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="580" y="120" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_4" value="MODULE 3.1: Tạo Giọng Nói" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="200" y="240" width="280" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_5" value="Trích Xuất Lời Thoại" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="240" y="320" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_6" value="edge-tts Tạo Âm Thanh&lt;br&gt;(MIỄN PHÍ, Song Song)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="240" y="410" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_7" value="Files Âm Thanh&lt;br&gt;[scene_0.mp3, ...]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="240" y="520" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_8" value="MODULE 3.2: Veo3 Client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="920" y="240" width="280" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_9" value="Trích Xuất Prompts Hình Ảnh" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="960" y="320" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_10" value="Gọi Veo3 API&lt;br&gt;(Song song cho từng cảnh)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="960" y="410" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_11" value="Video Clips&lt;br&gt;[scene_0.mp4, ...]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="960" y="520" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_12" value="MODULE 3.3: Ghép Video" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="460" y="660" width="480" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_13" value="Đồng Bộ Audio với Video&lt;br&gt;video.set_duration(audio.duration)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="550" y="740" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_14" value="Kiểm Tra Clips" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="550" y="840" width="300" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_15" value="Nối Các Videos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="550" y="930" width="300" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_16" value="Resize TikTok (9:16)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="550" y="1020" width="300" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_17" value="Thêm Phụ Đề (Tùy Chọn)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;dashed=1" parent="1" vertex="1">
+                    <mxGeometry x="550" y="1110" width="300" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_18" value="ĐẦU RA&lt;br&gt;Video TikTok Hoàn Chỉnh (MP4)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="550" y="1220" width="300" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_19" value="⏱️ TTS: 1-2 giây (MIỄN PHÍ)&lt;br&gt;⏱️ Tạo Video: 30-60 giây/clip&lt;br&gt;⏱️ Ghép phim: 10-20 giây&lt;br&gt;💰 Chi phí: $0.10/clip × 3 = $0.30&lt;br&gt;✅ Thành công: ~90%" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=left" parent="1" vertex="1">
+                    <mxGeometry x="100" y="940" width="240" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_3" target="p3_4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_3" target="p3_8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_4" target="p3_5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_5" target="p3_6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_6" target="p3_7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_8" target="p3_9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_9" target="p3_10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_10" target="p3_11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="p3_7" target="p3_12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="340" y="620"/>
+                            <mxPoint x="460" y="620"/>
+                            <mxPoint x="460" y="680"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3_29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="p3_11" target="p3_12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1060" y="620"/>
+                            <mxPoint x="940" y="620"/>
+                            <mxPoint x="940" y="680"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3_30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_12" target="p3_13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_13" target="p3_14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_14" target="p3_15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_15" target="p3_16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p3_16" target="p3_17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3_35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="1" source="p3_17" target="p3_18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="4. Phần 4 - Tích Hợp" id="part4">
+        <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1400" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="p4_2" value="PHẦN 4: LUỒNG TÍCH HỢP END-TO-END" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="300" y="40" width="800" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_3" value="BẮT ĐẦU&lt;br&gt;Ảnh Sản Phẩm + Tên + Yêu Cầu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="520" y="120" width="360" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_4" value="MODULE 4.1: TikTokVideoOrchestrator" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="450" y="220" width="500" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_5" value="Thực Thi PHẦN 1&lt;br&gt;Xử Lý Ảnh + Product Bible" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="550" y="320" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_6" value="Thực Thi PHẦN 2&lt;br&gt;Tạo Kịch Bản" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="550" y="420" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_7" value="Thực Thi PHẦN 3&lt;br&gt;Tạo Video &amp; Ghép Phim" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="550" y="520" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_8" value="Xử Lý Lỗi&lt;br&gt;• Try-Catch wrapper&lt;br&gt;• Dọn dẹp files tạm&lt;br&gt;• Ghi log có cấu trúc" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;align=left;dashed=1" parent="1" vertex="1">
+                    <mxGeometry x="950" y="320" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_9" value="Theo Dõi Chi Phí&lt;br&gt;• Gemini tokens&lt;br&gt;• Gọi Video API&lt;br&gt;• Tổng mỗi video" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=left" parent="1" vertex="1">
+                    <mxGeometry x="950" y="460" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_10" value="Dọn Dẹp Files Tạm&lt;br&gt;temp/audio/*, temp/videos/*" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="550" y="640" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_11" value="ĐẦU RA CUỐI CÙNG&lt;br&gt;{&lt;br&gt;  success: true,&lt;br&gt;  video_path: 'output/final.mp4',&lt;br&gt;  duration: 21,&lt;br&gt;  scenes: 3,&lt;br&gt;  cost: 0.303&lt;br&gt;}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;align=left" parent="1" vertex="1">
+                    <mxGeometry x="520" y="760" width="360" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_12" value="⏱️ TỔNG THỜI GIAN: 45-90 giây/video&lt;br&gt;💰 TỔNG CHI PHÍ: ~$0.31/video&lt;br&gt;📊 TỶ LỆ THÀNH CÔNG: ~90%&lt;br&gt;&lt;br&gt;Chi tiết:&lt;br&gt;• Phần 1: 3-8 giây&lt;br&gt;• Phần 2: 3-10 giây&lt;br&gt;• Phần 3: 30-70 giây (song song TTS + Video)&lt;br&gt;• Dọn dẹp: 1-2 giây" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=left" parent="1" vertex="1">
+                    <mxGeometry x="200" y="640" width="280" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="1" source="p4_3" target="p4_4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p4_4" target="p4_5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p4_5" target="p4_6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p4_6" target="p4_7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" parent="1" source="p4_7" target="p4_10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4_18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;" parent="1" source="p4_10" target="p4_11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

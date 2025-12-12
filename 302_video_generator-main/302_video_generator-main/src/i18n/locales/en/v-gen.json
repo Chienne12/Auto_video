@@ -1,0 +1,805 @@
+{
+  "action": {
+    "create_video": "Generate Video",
+    "delete_task": "Delete Task",
+    "delete_video": "Delete Video",
+    "download_video": "Download Video",
+    "edit_video": "Edit Again",
+    "extend_video": "Extend Video",
+    "extend_video_audio": "Add Voice",
+    "extend_video_ratio": "Extend Ratio",
+    "extend_video_style": "Extend Style",
+    "extend_video_time": "Extend Duration",
+    "extend_video_upscale": "Enhance Resolution",
+    "recreate_video": "Regenerate"
+  },
+  "desc": "Quickly generate various custom videos using AI",
+  "dialog": {
+    "audio_content": "Voice Content",
+    "audio_content_placeholder": "Enter voice content",
+    "cancel": "Cancel",
+    "duration": "Duration",
+    "extend_audio": {
+      "description": "Add voice to video using AI technology",
+      "title": "Add Video Voice"
+    },
+    "extend_ratio": {
+      "description": "Adjust video ratio using AI technology",
+      "horizontal_screen": "Horizontal",
+      "title": "Adjust Video Ratio",
+      "vertical_screen": "Vertical"
+    },
+    "extend_style": {
+      "description": "Adjust video style using AI technology",
+      "title": "Adjust Video Style"
+    },
+    "extend_upscale": {
+      "description": "Enhance video resolution and quality using AI technology",
+      "title": "Enhance Video Resolution"
+    },
+    "seconds": "s",
+    "select_duration": "Select Duration",
+    "select_resolution": "Select Resolution",
+    "submit": "Submit",
+    "video_content": "Video Content",
+    "video_content_placeholder": "Enter video content",
+    "video_content_style": "Video Style",
+    "video_content_style_placeholder": "Enter video style",
+    "video_duration": "Video Duration",
+    "video_ratio": "Video Ratio",
+    "video_resolution": "Video Resolution"
+  },
+  "example": {
+    "prompt": "In the morning mist, sunlight filters through treetops, casting dappled shadows, draping the earth in a golden veil. In the distance, green mountains stretch layer upon layer to the horizon, merging with the azure sky. Nearby, a stream flows gently, crystal clear, with wildflowers blooming along the banks—red, yellow, purple, like the earth's palette. As a breeze passes, the fragrance of flowers and earth mingles, fresh and pleasing. At this moment, the world is so tranquil, it's as if time has stood still, making one feel peaceful and content.",
+    "try": "Try it"
+  },
+  "form": {
+    "audio": {
+      "desc": "Choose whether to enable video sound",
+      "option": {
+        "close": "Disable sound",
+        "open": "Enable sound"
+      },
+      "title": "Sound Settings"
+    },
+    "camera": {
+      "desc": "Choose camera direction",
+      "option": {
+        "grane_down": "Descend",
+        "grane_up": "Rise",
+        "move_down": "Move Down",
+        "move_left": "Move Left",
+        "move_right": "Move Right",
+        "move_up": "Move Up",
+        "none": "None",
+        "orbit_left": "Orbit Left",
+        "orbit_right": "Orbit Right",
+        "pan_left": "Pan Left",
+        "pan_right": "Pan Right",
+        "push_in": "Push In",
+        "push_out": "Push Out"
+      },
+      "title": "Camera Control"
+    },
+    "first_frame": {
+      "desc": "Drag or click to upload an image",
+      "title": "First Frame"
+    },
+    "higgsfield_end_frame": {
+      "desc": "Upload video end frame",
+      "title": "Video End Frame (Optional)"
+    },
+    "higgsfield_mix": {
+      "title": "Enable Mixed Motion"
+    },
+    "higgsfield_model": {
+      "desc": "Select Higgsfield model",
+      "option": {
+        "lite": "Lite",
+        "standard": "Standard",
+        "turbo": "Turbo"
+      },
+      "title": "Higgsfield Model"
+    },
+    "higgsfield_motion": {
+      "desc": "Select motion template",
+      "option": {
+        "action_run_fire": "Action Run + Set on Fire",
+        "agent_reveal1": "Agent Reveal 1",
+        "agent_reveal2": "Agent Reveal 2",
+        "building_explosion1": "Building Explosion 1",
+        "building_explosion2": "Building Explosion 2",
+        "building_explosion_disintegration": "Building Explosion Disintegration",
+        "car_chasing_building_explosion": "Car Chasing + Building Explosion",
+        "car_crash": "Car Crash",
+        "car_explosion1": "Car Explosion 1",
+        "car_explosion2": "Car Explosion 2",
+        "crash_zoom_in_face_punch": "Crash Zoom In + Face Punch",
+        "crash_zoom_in_tentacles1": "Crash Zoom In + Tentacles 1",
+        "crash_zoom_in_tentacles2": "Crash Zoom In + Tentacles 2",
+        "dirty_lens1": "Dirty Lens 1",
+        "dirty_lens2": "Dirty Lens 2",
+        "disintegration1": "Disintegration 1",
+        "disintegration2": "Disintegration 2",
+        "eyes_in1": "Eyes In 1",
+        "eyes_in2": "Eyes In 2",
+        "face_punch1": "Face Punch 1",
+        "face_punch2": "Face Punch 2",
+        "flying1": "Flying 1",
+        "flying2": "Flying 2",
+        "flying_set_on_fire": "Flying + Set on Fire",
+        "glam1": "Glam 1",
+        "glam2": "Glam 2",
+        "invisible1": "Invisible 1",
+        "invisible2": "Invisible 2",
+        "kiss1": "Kiss",
+        "kiss2": "Kiss",
+        "lens_crack": "Lens Crack",
+        "lens_flare1": "Lens Flare 1",
+        "lens_flare2": "Lens Flare 2",
+        "levitation1": "Levitation 1",
+        "levitation2": "Levitation 2",
+        "levitation_invisible": "Levitation + Invisible",
+        "melting1": "Melting 1",
+        "melting2": "Melting 2",
+        "mouth_in1": "Mouth In 1",
+        "mouth_in2": "Mouth In 2",
+        "push_to_glass1": "Push To Glass 1",
+        "push_to_glass2": "Push To Glass 2",
+        "set_on_fire1": "Set on Fire 1",
+        "set_on_fire2": "Set on Fire 2",
+        "soul_jump1": "Soul Jump 1",
+        "soul_jump2": "Soul Jump 2",
+        "tentacles1": "Tentacles 1",
+        "tentacles2": "Tentacles 2",
+        "thunder_god1": "Thunder God 1",
+        "thunder_god2": "Thunder God 2",
+        "thunder_god_levitation": "Thunder God + Levitation",
+        "thunder_god_turning_metal": "Thunder God + Turning Metal",
+        "thunder_god_wind_to_face": "Thunder God + Wind to Face",
+        "turning_metal1": "Turning Metal 1",
+        "turning_metal2": "Turning Metal 2",
+        "turning_metal_melting": "Turning Metal + Melting",
+        "wind_to_face1": "Wind to Face 1",
+        "wind_to_face2": "Wind to Face 2"
+      },
+      "title": "Motion Template",
+      "title1": "Motion Template",
+      "title2": "Motion Template 2"
+    },
+    "higgsfield_motion_strength": {
+      "title": "Reference Strength"
+    },
+    "higgsfield_prompt": {
+      "desc": "Please enter the content of the video you want to generate",
+      "title": "Video Content"
+    },
+    "higgsfield_start_frame": {
+      "desc": "Upload video start frame",
+      "title": "Video Start Frame"
+    },
+    "higgsfield_time": {
+      "option": {
+        "long": "5s",
+        "short": "3s"
+      }
+    },
+    "kling_v21_aspect_ratio": {
+      "desc": "Please select the video ratio",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "Video Ratio"
+    },
+    "kling_v21_cfg": {
+      "desc": "Please select the level of video creativity",
+      "title": "Video Creative Level"
+    },
+    "kling_v21_duration": {
+      "desc": "Please select the video duration",
+      "option": {
+        "10": "10 seconds",
+        "5": "5 seconds"
+      },
+      "title": "Video Duration"
+    },
+    "kling_v21_image": {
+      "desc": "Please upload the first frame picture (only support jpg/png)",
+      "title": "First Frame"
+    },
+    "kling_v21_negative_prompt": {
+      "desc": "Please enter negative prompt words",
+      "title": "Negative Prompt"
+    },
+    "kling_v21_prompt": {
+      "desc": "Please enter the video content",
+      "title": "Video Content"
+    },
+    "kling_v21_type": {
+      "desc": "Please select the generation mode",
+      "option": {
+        "image_to_video": "Image generation video",
+        "text_to_video": "Text-generated video"
+      },
+      "title": "Generation Mode"
+    },
+    "kling_v21_version": {
+      "desc": "Please select the model version",
+      "option": {
+        "common": "Normal version",
+        "hq": "HQ Version",
+        "master": "Master Version"
+      },
+      "title": "Model Version"
+    },
+    "kling_v2_aspect_ratio": {
+      "desc": "Select video aspect ratio",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "Video Aspect Ratio"
+    },
+    "kling_v2_cfg": {
+      "desc": "Please enter the content of the video you want to generate",
+      "title": "Video Creativity Level"
+    },
+    "kling_v2_duration": {
+      "desc": "Select video duration",
+      "option": {
+        "10": "10s",
+        "5": "5s"
+      },
+      "title": "Video Duration"
+    },
+    "kling_v2_image": {
+      "desc": "Upload image",
+      "title": "Image"
+    },
+    "kling_v2_negative_prompt": {
+      "desc": "Please enter the content you don't want in the video",
+      "title": "Negative Content"
+    },
+    "kling_v2_prompt": {
+      "desc": "Please enter the content of the video you want to generate",
+      "title": "Video Content"
+    },
+    "kling_v2_type": {
+      "desc": "Select generation mode",
+      "option": {
+        "image_to_video": "Image to Video",
+        "text_to_video": "Text to Video"
+      },
+      "title": "Generation Mode"
+    },
+    "last_frame": {
+      "desc": "Drag or click to upload an image",
+      "title": "Last Frame"
+    },
+    "loop": {
+      "desc": "Choose whether to enable video loop",
+      "option": {
+        "close": "Disable loop",
+        "open": "Enable loop"
+      },
+      "title": "Video Loop"
+    },
+    "main_image": {
+      "desc": "Please upload main image",
+      "title": "Main Image"
+    },
+    "main_image1": {
+      "desc": "Please upload main image 1",
+      "title": "Main Image 1"
+    },
+    "main_image2": {
+      "desc": "Please upload main image 2",
+      "title": "Main Image 2"
+    },
+    "main_image3": {
+      "desc": "Please upload main image 3",
+      "title": "Main Image 3"
+    },
+    "minimaxi_duration": {
+      "desc": "Select video duration",
+      "option": {
+        "six": "6s",
+        "ten": "10s"
+      },
+      "title": "Video Duration"
+    },
+    "minimaxi_first_frame_image": {
+      "desc": "Upload video first frame",
+      "title": "Video First Frame"
+    },
+    "minimaxi_hailuo_prompt": {
+      "desc": "Please enter the content of the video you want to generate",
+      "title": "Video Content"
+    },
+    "minimaxi_prompt_optimizer": {
+      "desc": "Enable enhance prompt",
+      "title": "Enhance Prompt"
+    },
+    "minimaxi_resolution": {
+      "desc": "Select video resolution",
+      "option": {
+        "1080p": "1080p",
+        "768p": "768p"
+      },
+      "title": "Video Resolution"
+    },
+    "mj_video_image": {
+      "desc": "Please upload the first frame image",
+      "title": "First Frame Image"
+    },
+    "mj_video_motion": {
+      "desc": "Please select the video motion amplitude",
+      "high": "High",
+      "low": "Low",
+      "title": "Amplitude of Motion"
+    },
+    "mj_video_prompt": {
+      "desc": "Please enter the video content you want to generate",
+      "title": "Video Content"
+    },
+    "model": {
+      "desc": "Select model",
+      "option": {
+        "cog": "Cog",
+        "genmo": "Mochi-V1",
+        "haiper": "Haiper",
+        "higgsfield": "HiggsField",
+        "hunyuan": "Hunyuan",
+        "kling": "Kling",
+        "kling_15": "Kling-V1.5",
+        "kling_16": "Kling-V1.6",
+        "kling_2": "Kling-V2.0",
+        "kling_21": "Kling-V2.1",
+        "lightricks": "Lightricks",
+        "luma": "Luma",
+        "minimax": "Minimax-Video-01",
+        "minimax_live2d": "Minimax-Live2D",
+        "minimax_s2v01": "Minimax-S2V-01",
+        "minimaxi_hailuo_02": "Minimax-Hailuo-02",
+        "mj_video": "MJ-Video",
+        "pika": "Pika",
+        "pixverse": "PixVerse",
+        "runway": "Runway",
+        "seaweed": "Doubao-Seaweed",
+        "seedance": "Seedance",
+        "veo3": "Veo3",
+        "veo3_fast": "Veo3-Fast",
+        "veo3_pro": "Veo3-Pro",
+        "veo3_pro_frames": "Veo3-Pro-Frames",
+        "vidu": "Vidu",
+        "vidu_2": "Vidu-V2",
+        "wanx_plus": "Wanx-Plus",
+        "wanx_turbo": "Wanx-Turbo"
+      },
+      "title": "Video Model"
+    },
+    "pika_affects": {
+      "cake-ify": "Cake-ify",
+      "crumble": "Crumble",
+      "crush": "Crush",
+      "decapitate": "Decapitate",
+      "deflate": "Deflate",
+      "desc": "Please select video effects",
+      "dissolve": "Dissolve",
+      "explode": "Explode",
+      "eye-pop": "Eye-pop",
+      "inflate": "Inflate",
+      "levitate": "Levitate",
+      "melt": "Melt",
+      "peel": "Peel",
+      "poke": "Poke",
+      "squish": "Squish",
+      "ta-da": "Ta-da",
+      "tear": "Tear",
+      "title": "Special Effect"
+    },
+    "pika_image": {
+      "desc": "Please upload the reference image",
+      "title": "Image"
+    },
+    "pika_negative_prompt": {
+      "desc": "Please enter negative prompt words",
+      "title": "Negative Prompt"
+    },
+    "pika_prompt": {
+      "desc": "Please enter the video content you want to generate",
+      "title": "Video Content"
+    },
+    "prompt": {
+      "desc": "Please enter the content of the video you want to generate",
+      "title": "Video Content"
+    },
+    "ratio": {
+      "desc": "Choose video generation ratio",
+      "option": {
+        "custom": "Custom"
+      },
+      "title": "Video Ratio"
+    },
+    "reference_image": {
+      "desc": "Please upload reference image",
+      "title": "Reference Image"
+    },
+    "reference_image1": {
+      "desc": "Please upload reference image 1",
+      "title": "Reference Image 1"
+    },
+    "reference_image2": {
+      "desc": "Please upload reference image 2",
+      "title": "Reference Image 2"
+    },
+    "reference_image3": {
+      "desc": "Please upload reference image 3",
+      "title": "Reference Image 3"
+    },
+    "reference_image4": {
+      "desc": "Please upload reference image 4",
+      "title": "Reference Image 4"
+    },
+    "seedance_cf": {
+      "desc": "Select carmera fixed",
+      "option": {
+        "false": "False",
+        "true": "True"
+      },
+      "title": "Carmera Fixed"
+    },
+    "seedance_duration": {
+      "desc": "Select video duration",
+      "option": {
+        "10": "10s",
+        "5": "5s"
+      },
+      "title": "Video Duration"
+    },
+    "seedance_image": {
+      "desc": "Upload image",
+      "title": "Image"
+    },
+    "seedance_model": {
+      "desc": "Select seedance model",
+      "option": {
+        "lite": "Lite",
+        "pro": "Pro"
+      },
+      "title": "Seedance Model"
+    },
+    "seedance_ratio": {
+      "desc": "Select video ratio",
+      "option": {
+        "1_1": "1:1",
+        "21_9": "21:9",
+        "3_4": "3:4",
+        "9_16": "9:16",
+        "9_21": "9:21"
+      },
+      "title": "Video Ratio"
+    },
+    "seedance_resolution": {
+      "desc": "Select video resolution",
+      "option": {
+        "1080p": "1080p",
+        "480p": "480p",
+        "720p": "720p"
+      },
+      "title": "Video Resolution"
+    },
+    "seedance_text": {
+      "desc": "Please enter the content of the video you want to generate",
+      "title": "Video Content"
+    },
+    "seedance_type": {
+      "desc": "Select generation mode",
+      "option": {
+        "image_to_video": "Image to Video",
+        "text_to_video": "Text to Video"
+      },
+      "title": "Generation Mode"
+    },
+    "seedance_wm": {
+      "desc": "Select video watermark",
+      "option": {
+        "false": "False",
+        "true": "True"
+      },
+      "title": "Video Watermark"
+    },
+    "style": {
+      "desc": "Choose video effects",
+      "option": {
+        "cake_ify": "Slice",
+        "crumble": "Crumble",
+        "crush": "Crush",
+        "deflate": "Deflate",
+        "dissolve": "Dissolve",
+        "explode": "Explode",
+        "inflate": "Inflate",
+        "melt": "Melt",
+        "none": "None",
+        "squish": "Squish",
+        "ta_da": "Hide"
+      },
+      "title": "Video Effects"
+    },
+    "template": {
+      "desc": "Select Video Effects",
+      "option": {
+        "aliveArt": "Art Comes Alive",
+        "babyFace": "Baby Face",
+        "batmanReturns": "Transform into Batman",
+        "blackGokuEngine": "Black Goku Engine",
+        "catwomanTransformation": "Catwoman Transformation",
+        "christmasGiftBox": "Christmas Gift Box",
+        "christmasOutfit": "Christmas Outfit",
+        "cigarBoss": "Cigar Boss",
+        "fightAndMeet": "Fight to Meet",
+        "hairCurl": "Everything Can Be Curly",
+        "hairKing": "Hair Volume King",
+        "harleyQuinnTransformation": "Harley Quinn Transformation",
+        "hugYourLove": "Hug Your Love",
+        "ingiGaze": "Ingi's Gaze",
+        "ironmanTransformation": "Transform into Iron Man",
+        "jokerRebirth": "Transform into Joker",
+        "kissOfLove": "Kiss of Love",
+        "leggyRun": "Leggy Run",
+        "legoBlast": "Lego Blast",
+        "monsterInvades": "Monster Invades",
+        "muscleMan": "Become Muscle Man",
+        "sailorMoonTransformation": "Sailor Moon Transformation",
+        "santaHideAndSeek": "Where is Santa",
+        "squidGame": "Squid Game",
+        "squishIt": "Squish It",
+        "summonHulk": "Transform into Hulk",
+        "venomBrother": "Summon Venom Brother",
+        "venomColorBox": "Venom (Color Box Version)",
+        "venomReveal": "Who is Venom",
+        "venomTransformation": "Transform into Venom",
+        "wickedShots": "Wicked Shots",
+        "wizardHat": "Wizard Hat",
+        "wonderWomanTransformation": "Wonder Woman Transformation",
+        "zombieHand": "Zombie Hand",
+        "zombieMode": "Zombie Mode"
+      },
+      "title": "Video Effects"
+    },
+    "third_frame": {
+      "desc": "Drag and drop or click to upload image",
+      "title": "Video Third Frame"
+    },
+    "time": {
+      "desc": "Choose video duration",
+      "option": {
+        "long": "10 seconds",
+        "short": "5 seconds"
+      },
+      "title": "Video Duration"
+    },
+    "type": {
+      "desc": "Choose video generation mode",
+      "option": {
+        "fast": "Fast",
+        "hq": "High Quality"
+      },
+      "title": "Generation Mode"
+    },
+    "veo3_aspect_ratio": {
+      "desc": "Select video aspect ratio",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "Video Aspect Ratio"
+    },
+    "veo3_enhance_prompt": {
+      "desc": "Enable enhance prompt",
+      "title": "Enhance Prompt"
+    },
+    "veo3_fast_prompt": {
+      "desc": "Please enter the video content you want to generate",
+      "title": "Video Content"
+    },
+    "veo3_generate_audio": {
+      "desc": "Enable generate audio",
+      "title": "Generate Audio"
+    },
+    "veo3_pro_frames_image": {
+      "desc": "Upload Image",
+      "title": "Image"
+    },
+    "veo3_pro_frames_prompt": {
+      "desc": "Please enter the video content you want to generate",
+      "title": "Video Content"
+    },
+    "veo3_pro_prompt": {
+      "desc": "Please enter the video content you want to generate",
+      "title": "Video Content"
+    },
+    "veo3_prompt": {
+      "desc": "Please enter the content of the video you want to generate",
+      "title": "Video Content"
+    },
+    "vidu_resolution": {
+      "desc": "Select video resolution",
+      "option": {
+        "fhd": "Ultra HD",
+        "hd": "HD",
+        "sd": "SD"
+      },
+      "title": "Video Resolution"
+    },
+    "vidu_scene": {
+      "desc": "Select scene effect",
+      "option": {
+        "christmas_effect": "Transform into Santa",
+        "couple_arrival@flower": "Couple Give Flowers",
+        "couple_arrival@hug": "Couple Hug",
+        "couple_arrival@kiss": "Couple Kiss",
+        "couple_arrival@wave": "Couple Wave",
+        "cupid_arrow": "Cupid's Arrow",
+        "dreamy_wedding": "Dreamy Wedding",
+        "dynasty_dress@dress": "Traditional Costume Change",
+        "emotionlab@laugh": "Laugh Out Loud",
+        "emotionlab@smile": "Smile",
+        "emotionlab@surprised": "Surprised",
+        "emotionlab@terrible": "Fear",
+        "explode": "Explode",
+        "hair_swap@curl": "Curly Hair",
+        "hair_swap@double": "Twin Tails",
+        "hair_swap@long": "Long Hair",
+        "hug": "Hug",
+        "inflate": "Inflate",
+        "interaction@love": "Love Interaction",
+        "interaction@rose": "Give Rose",
+        "kiss": "Kiss",
+        "live_memory@old_photo": "Animate Old Photo",
+        "live_photo@camera": "Camera Motion",
+        "live_photo@smile": "Smile",
+        "live_photo@walk": "Walking",
+        "live_photo@wind": "Wind Effect",
+        "lover_pose@pose": "Family Heart Pose",
+        "lunar_newyear@cheers": "New Year Toast",
+        "lunar_newyear@fireworks": "New Year Fireworks",
+        "lunar_newyear@gift": "New Year Red Packet",
+        "melt": "Melt",
+        "merry_christmas": "Santa's Christmas Toast",
+        "pet_lovers": "Pet Lovers",
+        "romantic_lift": "Romantic Princess Hug",
+        "santa_gifts": "Santa Delivering Gifts",
+        "santa_hug": "Santa's Hug",
+        "sweet_proposal": "Sweet Proposal",
+        "twist": "Twist",
+        "wish_sender@coins": "God of Wealth Coins",
+        "wish_sender@love": "Heart with God of Wealth",
+        "youth_rewind@rewind": "Childhood Memories"
+      },
+      "title": "Scene Effect"
+    },
+    "vidu_style": {
+      "desc": "Select video style",
+      "option": {
+        "anime": "Anime",
+        "general": "General"
+      },
+      "title": "Video Style"
+    },
+    "vidu_time": {
+      "desc": "Select video duration",
+      "option": {
+        "long": "8s",
+        "short": "4s"
+      },
+      "title": "Video Duration"
+    },
+    "vidu_type": {
+      "desc": "Select video generation type",
+      "option": {
+        "character": "Character",
+        "general": "General",
+        "scene": "Scene"
+      },
+      "title": "Video Type"
+    },
+    "vidu_v2_aspect_ratio": {
+      "desc": "Select aspect ratio",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "Aspect Ratio"
+    },
+    "vidu_v2_end_frame": {
+      "desc": "Upload video end frame",
+      "title": "Video End Frame"
+    },
+    "vidu_v2_image": {
+      "desc": "Upload image",
+      "title": "Image"
+    },
+    "vidu_v2_model": {
+      "desc": "Select Vidu model",
+      "option": {
+        "vidu1_5": "vidu1.5",
+        "vidu2": "vidu2.0",
+        "viduq1": "viduq1"
+      },
+      "title": "Vidu Model"
+    },
+    "vidu_v2_movement_amplitude": {
+      "desc": "Select movement amplitude",
+      "option": {
+        "auto": "Auto",
+        "large": "Large",
+        "low": "Low",
+        "medium": "Medium"
+      },
+      "title": "Movement Amplitude"
+    },
+    "vidu_v2_reference_image1": {
+      "desc": "Upload reference image 1",
+      "title": "Reference Image 1"
+    },
+    "vidu_v2_reference_image2": {
+      "desc": "Upload reference image 2",
+      "title": "Reference Image 2"
+    },
+    "vidu_v2_reference_image3": {
+      "desc": "Upload reference image 3",
+      "title": "Reference Image 3"
+    },
+    "vidu_v2_resolution": {
+      "desc": "Select video resolution",
+      "option": {
+        "1080p": "1080p",
+        "360p": "360p",
+        "720p": "720p"
+      },
+      "title": "Video Resolution"
+    },
+    "vidu_v2_start_frame": {
+      "desc": "Upload video start frame",
+      "title": "Video Start Frame"
+    },
+    "vidu_v2_time": {
+      "desc": "Select video duration",
+      "option": {
+        "4": "4s",
+        "5": "5s",
+        "8": "8s"
+      },
+      "title": "Video Duration"
+    },
+    "vidu_v2_type": {
+      "desc": "Select video generation mode",
+      "option": {
+        "character_to_video": "Character Reference to Video",
+        "head_tail_to_video": "Head-Tail Frame to Video",
+        "image_to_video": "Image to Video",
+        "scene_to_video": "Scene Effect Video",
+        "text_to_video": "Text to Video"
+      },
+      "title": "Generation Mode"
+    }
+  },
+  "info": {
+    "video_on_audio": "Video is being dubbed",
+    "video_on_create": "Video is being generated",
+    "video_on_extend": "Video is being extended"
+  },
+  "task": {
+    "clear": "Clear tasks",
+    "empty": "No video generation tasks yet",
+    "title": "Create Video",
+    "total": "A total of {{count}} videos being generated"
+  },
+  "title": "AI Video Generator"
+}

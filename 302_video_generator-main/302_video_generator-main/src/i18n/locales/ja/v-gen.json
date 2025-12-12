@@ -1,0 +1,805 @@
+{
+  "action": {
+    "create_video": "ビデオを生成",
+    "delete_task": "タスクを削除",
+    "delete_video": "ビデオを削除",
+    "download_video": "ビデオをダウンロード",
+    "edit_video": "再編集",
+    "extend_video": "ビデオを拡張",
+    "extend_video_audio": "音声を追加",
+    "extend_video_ratio": "比率を延長",
+    "extend_video_style": "スタイルを延長",
+    "extend_video_time": "再生時間を延長",
+    "extend_video_upscale": "解像度向上",
+    "recreate_video": "再生成"
+  },
+  "desc": "AIを使用して様々なカスタマイズビデオを素早く生成",
+  "dialog": {
+    "audio_content": "音声内容",
+    "audio_content_placeholder": "音声内容を入力",
+    "cancel": "キャンセル",
+    "duration": "時間",
+    "extend_audio": {
+      "description": "AI技術を使用して動画に音声を追加",
+      "title": "動画音声の追加"
+    },
+    "extend_ratio": {
+      "description": "AI技術を使用して動画比率を調整",
+      "horizontal_screen": "横画面",
+      "title": "動画比率の調整",
+      "vertical_screen": "縦画面"
+    },
+    "extend_style": {
+      "description": "AI技術を使用して動画スタイルを調整",
+      "title": "動画スタイルの調整"
+    },
+    "extend_upscale": {
+      "description": "AI技術を使用して動画の解像度と品質を向上",
+      "title": "動画解像度の向上"
+    },
+    "seconds": "秒",
+    "select_duration": "時間を選択",
+    "select_resolution": "解像度を選択",
+    "submit": "確認",
+    "video_content": "動画内容",
+    "video_content_placeholder": "動画内容を入力",
+    "video_content_style": "動画スタイル",
+    "video_content_style_placeholder": "動画スタイルを入力",
+    "video_duration": "動画時間",
+    "video_ratio": "動画比率",
+    "video_resolution": "動画解像度"
+  },
+  "example": {
+    "prompt": "朝の薄霧の中で、陽光が木々の間を通り抜け、まだらな光と影を大地にまぶしていた。遠くには、青翠の山々が重なり合って空と一体化している。近くでは、小川が澄んだ水を流し、岸辺には色とりどりの野花が咲き競っている。それらは大地のパレットのようだ。そよ風が吹き、花の香りと土の香りが混じり合って心地よい。この瞬間、天地はこんなにも静まり返り、時が止まったかのように心が落ち着くようだ",
+    "try": "試してみる"
+  },
+  "form": {
+    "audio": {
+      "desc": "ビデオの音響を有効化するか選択",
+      "option": {
+        "close": "音響を無効化",
+        "open": "音響を有効化"
+      },
+      "title": "音響設定"
+    },
+    "camera": {
+      "desc": "ビデオのカメラ方向を選択",
+      "option": {
+        "grane_down": "下降",
+        "grane_up": "上昇",
+        "move_down": "下に移動",
+        "move_left": "左に移動",
+        "move_right": "右に移動",
+        "move_up": "上に移動",
+        "none": "なし",
+        "orbit_left": "左に回転",
+        "orbit_right": "右に回転",
+        "pan_left": "左にパン",
+        "pan_right": "右にパン",
+        "push_in": "プッシュイン",
+        "push_out": "プッシュアウト"
+      },
+      "title": "カメラ制御"
+    },
+    "first_frame": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "ビデオ初フレーム"
+    },
+    "higgsfield_end_frame": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "ビデオ尾フレーム（オプション）"
+    },
+    "higgsfield_mix": {
+      "title": "混合動作テンプレート"
+    },
+    "higgsfield_model": {
+      "desc": "Higgsfield 模型を選択",
+      "option": {
+        "lite": "Lite",
+        "standard": "Standard",
+        "turbo": "Turbo"
+      },
+      "title": "Higgsfield 模型"
+    },
+    "higgsfield_motion": {
+      "desc": "アクションテンプレートの選択",
+      "option": {
+        "action_run_fire": "アクションラン + 炎上",
+        "agent_reveal1": "エージェント現れ 1",
+        "agent_reveal2": "エージェント現れ 2",
+        "building_explosion1": "建物爆発 1",
+        "building_explosion2": "建物爆発 2",
+        "building_explosion_disintegration": "建物爆発と崩壊",
+        "car_chasing_building_explosion": "車の追跡 + 建物爆発",
+        "car_crash": "車衝突",
+        "car_explosion1": "車爆発 1",
+        "car_explosion2": "車爆発 2",
+        "crash_zoom_in_face_punch": "クラッシュズームイン + フェイスパンチ",
+        "crash_zoom_in_tentacles1": "クラッシュズームイン + 触手 1",
+        "crash_zoom_in_tentacles2": "クラッシュズームイン + 触手 2",
+        "dirty_lens1": "汚れたレンズ 1",
+        "dirty_lens2": "汚れたレンズ 2",
+        "disintegration1": "崩壊 1",
+        "disintegration2": "崩壊 2",
+        "eyes_in1": "目のズームイン 1",
+        "eyes_in2": "目のズームイン 2",
+        "face_punch1": "フェイスパンチ 1",
+        "face_punch2": "フェイスパンチ 2",
+        "flying1": "飛行 1",
+        "flying2": "飛行 2",
+        "flying_set_on_fire": "飛行 + 炎上",
+        "glam1": "グラム 1",
+        "glam2": "グラム 2",
+        "invisible1": "透明化 1",
+        "invisible2": "透明化 2",
+        "kiss1": "キス 1",
+        "kiss2": "キス 2",
+        "lens_crack": "レンズ亀裂",
+        "lens_flare1": "レンズフレア 1",
+        "lens_flare2": "レンズフレア 2",
+        "levitation1": "浮遊 1",
+        "levitation2": "浮遊 2",
+        "levitation_invisible": "浮遊 + 透明化",
+        "melting1": "溶解 1",
+        "melting2": "溶解 2",
+        "mouth_in1": "口のズームイン 1",
+        "mouth_in2": "口のズームイン 2",
+        "push_to_glass1": "ガラスに押し付ける 1",
+        "push_to_glass2": "ガラスに押し付ける 2",
+        "set_on_fire1": "炎上 1",
+        "set_on_fire2": "炎上 2",
+        "soul_jump1": "ソウルジャンプ 1",
+        "soul_jump2": "ソウルジャンプ 2",
+        "tentacles1": "触手 1",
+        "tentacles2": "触手 2",
+        "thunder_god1": "雷神 1",
+        "thunder_god2": "雷神 2",
+        "thunder_god_levitation": "雷神 + 浮遊",
+        "thunder_god_turning_metal": "雷神 + 金属化",
+        "thunder_god_wind_to_face": "雷神 + 顔に風",
+        "turning_metal1": "金属化 1",
+        "turning_metal2": "金属化 2",
+        "turning_metal_melting": "金属化 + 溶解",
+        "wind_to_face1": "顔に風 1",
+        "wind_to_face2": "顔に風 2"
+      },
+      "title": "アクションテンプレート",
+      "title1": "アクションテンプレート",
+      "title2": "アクションテンプレート 2"
+    },
+    "higgsfield_motion_strength": {
+      "title": "基準強度"
+    },
+    "higgsfield_prompt": {
+      "desc": "ビデオ内容を入力",
+      "title": "ビデオ内容"
+    },
+    "higgsfield_start_frame": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "ビデオ首フレーム"
+    },
+    "higgsfield_time": {
+      "option": {
+        "long": "5秒",
+        "short": "3秒"
+      }
+    },
+    "kling_v21_aspect_ratio": {
+      "desc": "ビデオ比を選択してください",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "ビデオ比"
+    },
+    "kling_v21_cfg": {
+      "desc": "ビデオの創造性のレベルを選択してください",
+      "title": "ビデオクリエイティブレベル"
+    },
+    "kling_v21_duration": {
+      "desc": "ビデオ期間を選択してください",
+      "option": {
+        "10": "10秒",
+        "5": "5秒"
+      },
+      "title": "ビデオの期間"
+    },
+    "kling_v21_image": {
+      "desc": "最初のフレーム画像をアップロードしてください（JPG/PNGのみをサポートしてください）",
+      "title": "最初のフレーム画像"
+    },
+    "kling_v21_negative_prompt": {
+      "desc": "否定的な迅速な単語を入力してください",
+      "title": "否定的な迅速な単語"
+    },
+    "kling_v21_prompt": {
+      "desc": "ビデオコンテンツを入力してください",
+      "title": "ビデオコンテンツ"
+    },
+    "kling_v21_type": {
+      "desc": "生成モードを選択してください",
+      "option": {
+        "image_to_video": "画像生成ビデオ",
+        "text_to_video": "テキスト生成ビデオ"
+      },
+      "title": "モードを生成します"
+    },
+    "kling_v21_version": {
+      "desc": "モデルバージョンを選択してください",
+      "option": {
+        "common": "通常のバージョン",
+        "hq": "高解像度バージョン",
+        "master": "マスターエディション"
+      },
+      "title": "モデルバージョン"
+    },
+    "kling_v2_aspect_ratio": {
+      "desc": "動画のアスペクト比を選択",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "動画のアスペクト比"
+    },
+    "kling_v2_cfg": {
+      "desc": "生成したい動画の内容を入力してください",
+      "title": "動画の創造性レベル"
+    },
+    "kling_v2_duration": {
+      "desc": "動画の再生時間を選択",
+      "option": {
+        "10": "10s",
+        "5": "5s"
+      },
+      "title": "動画の再生時間"
+    },
+    "kling_v2_image": {
+      "desc": "画像をアップロード",
+      "title": "画像"
+    },
+    "kling_v2_negative_prompt": {
+      "desc": "生成したくない動画の内容を入力してください",
+      "title": "ネガティブな内容"
+    },
+    "kling_v2_prompt": {
+      "desc": "生成したい動画の内容を入力してください",
+      "title": "動画内容"
+    },
+    "kling_v2_type": {
+      "desc": "生成モードを選択",
+      "option": {
+        "image_to_video": "画像から動画を生成",
+        "text_to_video": "テキストから動画を生成"
+      },
+      "title": "生成モード"
+    },
+    "last_frame": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "ビデオ最後のフレーム"
+    },
+    "loop": {
+      "desc": "ビデオループを有効化するか選択",
+      "option": {
+        "close": "ループを無効化",
+        "open": "ループを有効化"
+      },
+      "title": "ビデオループ"
+    },
+    "main_image": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "メイン画像"
+    },
+    "main_image1": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "メイン画像1"
+    },
+    "main_image2": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "メイン画像2"
+    },
+    "main_image3": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "メイン画像3"
+    },
+    "minimaxi_duration": {
+      "desc": "ビデオ時間を選択",
+      "option": {
+        "six": "6s",
+        "ten": "10s"
+      },
+      "title": "ビデオ時間"
+    },
+    "minimaxi_first_frame_image": {
+      "desc": "ビデオ首フレームをアップロード",
+      "title": "ビデオ首フレーム"
+    },
+    "minimaxi_hailuo_prompt": {
+      "desc": "ビデオ内容を入力",
+      "title": "ビデオ内容"
+    },
+    "minimaxi_prompt_optimizer": {
+      "desc": "拡張プロンプトを有効にする",
+      "title": "拡張プロンプト"
+    },
+    "minimaxi_resolution": {
+      "desc": "ビデオ解像度を選択",
+      "option": {
+        "1080p": "1080p",
+        "768p": "768p"
+      },
+      "title": "ビデオ解像度"
+    },
+    "mj_video_image": {
+      "desc": "最初のフレーム画像をアップロードしてください",
+      "title": "最初のフレーム画像"
+    },
+    "mj_video_motion": {
+      "desc": "ビデオモーションの振幅を選択してください",
+      "high": "高い",
+      "low": "低い",
+      "title": "動きの振幅"
+    },
+    "mj_video_prompt": {
+      "desc": "生成するビデオコンテンツを入力してください",
+      "title": "ビデオコンテンツ"
+    },
+    "model": {
+      "desc": "モデルを選択",
+      "option": {
+        "cog": "智谱",
+        "genmo": "Mochi-V1",
+        "haiper": "Haiper",
+        "higgsfield": "HiggsField",
+        "hunyuan": "Hunyuan",
+        "kling": "Kling",
+        "kling_15": "Kling-V1.5",
+        "kling_16": "Kling-V1.6",
+        "kling_2": "Kling-V2.0",
+        "kling_21": "Kling-V2.1",
+        "lightricks": "Lightricks",
+        "luma": "Luma",
+        "minimax": "Minimax-Video-01",
+        "minimax_hailuo_02": "Minimax-Hailuo-02",
+        "minimax_live2d": "Minimax-Live2D",
+        "minimax_s2v01": "Minimax-S2V-01",
+        "mj_video": "MJ-Video",
+        "pika": "Pika",
+        "pixverse": "PixVerse",
+        "runway": "Runway",
+        "seaweed": "Doubao-Seaweed",
+        "seedance": "Seedance",
+        "veo3": "Veo3",
+        "veo3_fast": "Veo3-Fast",
+        "veo3_pro": "Veo3-Pro",
+        "veo3_pro_frames": "Veo3-Pro-Frames",
+        "vidu": "Vidu",
+        "vidu_2": "Vidu-V2",
+        "wanx_plus": "Wanx-Plus",
+        "wanx_turbo": "Wanx-Turbo"
+      },
+      "title": "ビデオモデル"
+    },
+    "pika_affects": {
+      "cake-ify": "薄力粉",
+      "crumble": "打ち砕く",
+      "crush": "打ち砕く",
+      "decapitate": "斬首",
+      "deflate": "しぼませる",
+      "desc": "ビデオエフェクトを選択してください",
+      "dissolve": "解決します",
+      "explode": "爆発します",
+      "eye-pop": "目を燃やします",
+      "inflate": "インフレータブル",
+      "levitate": "サスペンション",
+      "melt": "溶ける",
+      "peel": "ストリッピング",
+      "poke": "スタンプ",
+      "squish": "平らに",
+      "ta-da": "タダ",
+      "tear": "破れ目",
+      "title": "特撮"
+    },
+    "pika_image": {
+      "desc": "参照画像をアップロードしてください",
+      "title": "写真"
+    },
+    "pika_negative_prompt": {
+      "desc": "否定的な迅速な単語を入力してください",
+      "title": "否定的な迅速な単語"
+    },
+    "pika_prompt": {
+      "desc": "生成するビデオコンテンツを入力してください",
+      "title": "ビデオコンテンツ"
+    },
+    "prompt": {
+      "desc": "生成したいビデオの内容を入力してください",
+      "title": "ビデオ内容"
+    },
+    "ratio": {
+      "desc": "ビデオ生成比率を選択",
+      "option": {
+        "custom": "カスタム"
+      },
+      "title": "ビデオ比率"
+    },
+    "reference_image": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "参考画像"
+    },
+    "reference_image1": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "参考画像1"
+    },
+    "reference_image2": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "参考画像2"
+    },
+    "reference_image3": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "参考画像3"
+    },
+    "reference_image4": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "参考画像4"
+    },
+    "seedance_cf": {
+      "desc": "カメラ固定を選択",
+      "option": {
+        "false": "無効",
+        "true": "有効"
+      },
+      "title": "カメラ固定"
+    },
+    "seedance_duration": {
+      "desc": "ビデオ時間を選択",
+      "option": {
+        "10": "10s",
+        "5": "5s"
+      },
+      "title": "ビデオ時間"
+    },
+    "seedance_image": {
+      "desc": "画像をアップロード",
+      "title": "画像"
+    },
+    "seedance_model": {
+      "desc": "Seedance モデルを選択",
+      "option": {
+        "lite": "Lite",
+        "pro": "Pro"
+      },
+      "title": "Seedance モデル"
+    },
+    "seedance_ratio": {
+      "desc": "動画比率を選択",
+      "option": {
+        "1_1": "1:1",
+        "21_9": "21:9",
+        "3_4": "3:4",
+        "9_16": "9:16",
+        "9_21": "9:21"
+      },
+      "title": "動画比率"
+    },
+    "seedance_resolution": {
+      "desc": "動画解像度を選択",
+      "option": {
+        "1080p": "1080p",
+        "480p": "480p",
+        "720p": "720p"
+      },
+      "title": "動画解像度"
+    },
+    "seedance_text": {
+      "desc": "生成したい動画の内容を入力してください",
+      "title": "動画内容"
+    },
+    "seedance_type": {
+      "desc": "生成モードを選択",
+      "option": {
+        "image_to_video": "画像から動画を生成",
+        "text_to_video": "テキストから動画を生成"
+      },
+      "title": "生成モード"
+    },
+    "seedance_wm": {
+      "desc": "動画透かしを選択",
+      "option": {
+        "false": "無効",
+        "true": "有効"
+      },
+      "title": "動画透かし"
+    },
+    "style": {
+      "desc": "ビデオエフェクトを選択",
+      "option": {
+        "cake_ify": "切り分け",
+        "crumble": "崩壊",
+        "crush": "つぶす",
+        "deflate": "収縮",
+        "dissolve": "分解",
+        "explode": "爆発",
+        "inflate": "膨張",
+        "melt": "溶融",
+        "none": "なし",
+        "squish": "押しつぶす",
+        "ta_da": "隠す"
+      },
+      "title": "ビデオエフェクト"
+    },
+    "template": {
+      "desc": "ビデオエフェクトを選択",
+      "option": {
+        "aliveArt": "アート・カムズ・アライブ",
+        "babyFace": "ベビーフェイス",
+        "batmanReturns": "バットマンに変身",
+        "blackGokuEngine": "ブラック悟空エンジン",
+        "catwomanTransformation": "キャットウーマン変身",
+        "christmasGiftBox": "クリスマスギフトボックス",
+        "christmasOutfit": "クリスマスコスチューム",
+        "cigarBoss": "シガーボス",
+        "fightAndMeet": "戦いの出会い",
+        "hairCurl": "万物カール可能",
+        "hairKing": "ヘアボリュームキング",
+        "harleyQuinnTransformation": "ハーレイ・クイン変身",
+        "hugYourLove": "愛のハグ",
+        "ingiGaze": "インギの凝視",
+        "ironmanTransformation": "アイアンマンに変身",
+        "jokerRebirth": "ジョーカーに変身",
+        "kissOfLove": "愛のキス",
+        "leggyRun": "長脚ラン",
+        "legoBlast": "レゴブラスト",
+        "monsterInvades": "モンスター侵入",
+        "muscleMan": "マッチョマンに変身",
+        "sailorMoonTransformation": "セーラームーン変身",
+        "santaHideAndSeek": "サンタを探せ",
+        "squidGame": "イカゲーム",
+        "squishIt": "押しつぶす",
+        "summonHulk": "ハルクに変身",
+        "venomBrother": "ヴェノムブラザー召喚",
+        "venomColorBox": "ヴェノム（カラーボックス版）",
+        "venomReveal": "ヴェノムは誰だ",
+        "venomTransformation": "ヴェノムに変身",
+        "wickedShots": "イタズラショット",
+        "wizardHat": "魔法使いの帽子",
+        "wonderWomanTransformation": "ワンダーウーマン変身",
+        "zombieHand": "ゾンビハンド",
+        "zombieMode": "ゾンビモード"
+      },
+      "title": "ビデオエフェクト"
+    },
+    "third_frame": {
+      "desc": "ドラッグまたはクリックして画像をアップロード",
+      "title": "ビデオ第三フレーム"
+    },
+    "time": {
+      "desc": "ビデオの長さを選選",
+      "option": {
+        "long": "10秒",
+        "short": "5秒"
+      },
+      "title": "ビデオ長さ"
+    },
+    "type": {
+      "desc": "ビデオ生成モードを選択",
+      "option": {
+        "fast": "快速",
+        "hq": "高精細"
+      },
+      "title": "生成モード"
+    },
+    "veo3_aspect_ratio": {
+      "desc": "動画のアスペクト比を選択",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "動画のアスペクト比"
+    },
+    "veo3_enhance_prompt": {
+      "desc": "拡張プロンプトを有効にする",
+      "title": "拡張プロンプト"
+    },
+    "veo3_fast_prompt": {
+      "desc": "生成するビデオコンテンツを入力してください",
+      "title": "ビデオコンテンツ"
+    },
+    "veo3_generate_audio": {
+      "desc": "音声生成を有効にする",
+      "title": "音声生成"
+    },
+    "veo3_pro_frames_image": {
+      "desc": "写真をアップロードします",
+      "title": "写真"
+    },
+    "veo3_pro_frames_prompt": {
+      "desc": "生成するビデオコンテンツを入力してください",
+      "title": "ビデオコンテンツ"
+    },
+    "veo3_pro_prompt": {
+      "desc": "生成するビデオコンテンツを入力してください",
+      "title": "ビデオコンテンツ"
+    },
+    "veo3_prompt": {
+      "desc": "動画内容を入力",
+      "title": "動画内容"
+    },
+    "vidu_resolution": {
+      "desc": "ビデオ解像度を選択",
+      "option": {
+        "fhd": "超高画質",
+        "hd": "高画質",
+        "sd": "標準画質"
+      },
+      "title": "ビデオ解像度"
+    },
+    "vidu_scene": {
+      "desc": "シーン効果を選択",
+      "option": {
+        "christmas_effect": "サンタに変身",
+        "couple_arrival@flower": "カップルが花を贈る",
+        "couple_arrival@hug": "カップルが抱き合う",
+        "couple_arrival@kiss": "カップルがキスする",
+        "couple_arrival@wave": "カップルが手を振る",
+        "cupid_arrow": "カプディウスの矢",
+        "dreamy_wedding": "ドリームウェディング",
+        "dynasty_dress@dress": "伝統衣装チェンジ",
+        "emotionlab@laugh": "大笑い",
+        "emotionlab@smile": "スマイル",
+        "emotionlab@surprised": "驚き",
+        "emotionlab@terrible": "恐怖",
+        "explode": "爆発",
+        "hair_swap@curl": "カール",
+        "hair_swap@double": "ツインテール",
+        "hair_swap@long": "ロングヘア",
+        "hug": "ハグ",
+        "inflate": "膨張",
+        "interaction@love": "愛の交流",
+        "interaction@rose": "バラを贈る",
+        "kiss": "キス",
+        "live_memory@old_photo": "古い写真をアニメーション化",
+        "live_photo@camera": "カメラモーション",
+        "live_photo@smile": "スマイル",
+        "live_photo@walk": "歩行",
+        "live_photo@wind": "風エフェクト",
+        "lover_pose@pose": "家族のハートポーズ",
+        "lunar_newyear@cheers": "新年の乾杯",
+        "lunar_newyear@fireworks": "新年の花火",
+        "lunar_newyear@gift": "新年の紅包",
+        "melt": "溶解",
+        "merry_christmas": "サンタの乾杯",
+        "pet_lovers": "ペットラブラー",
+        "romantic_lift": "ロマンティックなプリンセスハグ",
+        "santa_gifts": "サンタのプレゼント配り",
+        "santa_hug": "サンタのハグ",
+        "sweet_proposal": "甘いプロポーズ",
+        "twist": "ねじれ",
+        "wish_sender@coins": "財神の金貨",
+        "wish_sender@love": "財神とハートポーズ",
+        "youth_rewind@rewind": "子供時代の思い出"
+      },
+      "title": "シーン効果"
+    },
+    "vidu_style": {
+      "desc": "ビデオスタイルを選択",
+      "option": {
+        "anime": "アニメ",
+        "general": "一般"
+      },
+      "title": "ビデオスタイル"
+    },
+    "vidu_time": {
+      "desc": "ビデオ時間を選択",
+      "option": {
+        "long": "8秒",
+        "short": "4秒"
+      },
+      "title": "ビデオ時間"
+    },
+    "vidu_type": {
+      "desc": "ビデオ生成タイプを選択",
+      "option": {
+        "character": "キャラクター",
+        "general": "一般",
+        "scene": "シーン"
+      },
+      "title": "ビデオタイプ"
+    },
+    "vidu_v2_aspect_ratio": {
+      "desc": "アスペクト比を選択",
+      "option": {
+        "16_9": "16:9",
+        "1_1": "1:1",
+        "9_16": "9:16"
+      },
+      "title": "アスペクト比"
+    },
+    "vidu_v2_end_frame": {
+      "desc": "ビデオ終了フレームをアップロード",
+      "title": "ビデオ終了フレーム"
+    },
+    "vidu_v2_image": {
+      "desc": "画像をアップロード",
+      "title": "画像"
+    },
+    "vidu_v2_model": {
+      "desc": "Vidu 模型を選択",
+      "option": {
+        "vidu1_5": "vidu1.5",
+        "vidu2": "vidu2.0",
+        "viduq1": "viduq1"
+      },
+      "title": "Vidu 模型"
+    },
+    "vidu_v2_movement_amplitude": {
+      "desc": "運動の幅を選択",
+      "option": {
+        "auto": "自動",
+        "large": "大",
+        "low": "小",
+        "medium": "中"
+      },
+      "title": "運動の幅"
+    },
+    "vidu_v2_reference_image1": {
+      "desc": "参照画像1をアップロード",
+      "title": "参照画像1"
+    },
+    "vidu_v2_reference_image2": {
+      "desc": "参照画像2をアップロード",
+      "title": "参照画像2"
+    },
+    "vidu_v2_reference_image3": {
+      "desc": "参照画像3をアップロード",
+      "title": "参照画像3"
+    },
+    "vidu_v2_resolution": {
+      "desc": "ビデオ解像度を選択",
+      "option": {
+        "1080p": "1080p",
+        "360p": "360p",
+        "720p": "720p"
+      },
+      "title": "ビデオ解像度"
+    },
+    "vidu_v2_start_frame": {
+      "desc": "ビデオ開始フレームをアップロード",
+      "title": "ビデオ開始フレーム"
+    },
+    "vidu_v2_time": {
+      "desc": "ビデオ時間を選択",
+      "option": {
+        "4": "4s",
+        "5": "5s",
+        "8": "8s"
+      },
+      "title": "ビデオ時間"
+    },
+    "vidu_v2_type": {
+      "desc": "ビデオ生成モードを選択",
+      "option": {
+        "character_to_video": "キャラクター参照からビデオを生成",
+        "head_tail_to_video": "最初と最後のフレームからビデオを生成",
+        "image_to_video": "画像からビデオを生成",
+        "scene_to_video": "シーン効果ビデオを生成",
+        "text_to_video": "テキストからビデオを生成"
+      },
+      "title": "生成モード"
+    }
+  },
+  "info": {
+    "video_on_audio": "ビデオ吹き替え中",
+    "video_on_create": "ビデオ生成中",
+    "video_on_extend": "ビデオ拡張中"
+  },
+  "task": {
+    "clear": "タスクをクリア",
+    "empty": "ビデオ生成タスクはありません",
+    "title": "ビデオを作成",
+    "total": "合計{{count}}本のビデオ生成中"
+  },
+  "title": "AIビデオジェネレーター"
+}
