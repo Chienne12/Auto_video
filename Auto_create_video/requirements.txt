@@ -1,0 +1,28 @@
+# ===== CORE DEPENDENCIES =====
+# Image Processing
+opencv-python>=4.8.0
+Pillow>=10.0.0
+rembg>=2.0.50
+numpy>=1.24.0
+
+# Machine Learning (for ProductBible)
+scikit-learn>=1.3.0
+
+# API Clients
+google-generativeai>=0.3.0
+
+# TTS
+edge-tts>=6.1.9
+pydub>=0.25.1
+
+# Video Processing
+moviepy>=1.0.3
+
+# FAL AI (Video API)
+fal-client>=0.3.0
+
+# Utilities
+python-dotenv>=1.0.0
+tenacity>=8.2.3
+pydantic>=2.5.0
+requests>=2.31.0
